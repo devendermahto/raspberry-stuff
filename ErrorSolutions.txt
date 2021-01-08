@@ -4,8 +4,19 @@ Fontconfig warning: ignoring UTF-8: not a valid region tag
 <<Solution 1>>
 https://rohankapoor.com/2012/04/americanizing-the-raspberry-pi/
 
+<<SOLUTION 2>>
+I’ve tried various methods presented by google, none solved my problem:
 
-<<Solution 2>>
+apt-get install --reinstall locales && sudo dpkg-reconfigure locales
+
+dpkg-reconfigure locales
+
+locale-gen en_US.UTF-8
+
+locale-gen --no-purge --lang en_US.UTF-8
+
+
+<<Solution 3>>
 Please add these following using Octave-CLI
 
 LANG="en_US.UTF-8"
