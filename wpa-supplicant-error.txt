@@ -1,0 +1,40 @@
+## Error
+raspi-config shows Unable to communicate with wpa_supplicant
+
+First Check Locale (Language) Setting) if it is en.US
+then your wpa_supplicant.conf file follows the same as country=US
+
+then save it 
+
+reload the service
+
+sudo wpa_cli -i wlan0 reconfigure
+
+
+##Solution
+
+I found wpa_supplicant to be super confusing to work with until I figured out how to see its debug messages by running it manually.
+
+sudo killall wpa_supplicant
+sudo wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+(Add a -d onto the end to make it verbose.)
+
+Until I figured this out, it was complete voodoo. Once you get the config file right, reboot to get the normal daemon back, it should work normally.
+
+
+##SOlution #2
+
+Modify wpa_supplicant file
+
+If your output is Could not communicate with wpa_supplicant Then try and edit it.
+
+Edit the wpa_supplicant.conf file
+
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+Then add the following network information
+
+network={
+ssid="networkname"
+psk="networkPassword"
+}
+See if you are then able to see the Networks on the top right of the display.
