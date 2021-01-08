@@ -1,3 +1,8 @@
+## printing website data in terminal using chromium-browser or chrome
 pi@raspberrypi:~ $ chromium-browser --headless --disable-gpu --dump-dom https://domain.com
+
+## saving requested page to pdf file
+pi@raspberrypi:~ $ chromium-browser --headless --ignore-certificate-errors --hide-scrollbars --print-to-pdf='mypdf.pdf' --run-all-compositor-stages-before-draw --no-sandbox --virtual-time-budget=60000 https://example.com/mypage.html
+
 
 
