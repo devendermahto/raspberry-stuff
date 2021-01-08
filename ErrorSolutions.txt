@@ -1,0 +1,10 @@
+<<Error >>
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+
+<<Solution>>
+
+Please add these following using Octave-CLI
+
+LANG="en_US.UTF-8"
+LANGUAGE="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
