@@ -1,6 +1,7 @@
 ## printing website data in terminal using chromium-browser or chrome
 sudo apt install chromium-browser -y
 chromium-browser
+sudo apt-get install chromium-chromedriver
 pi@raspberrypi:~ $ chromium-browser --headless --disable-gpu --dump-dom https://domain.com
 
 ## saving requested page to pdf file
