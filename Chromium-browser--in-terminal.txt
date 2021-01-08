@@ -1,4 +1,3 @@
-```
 pi@raspberrypi:~ $ chromium-browser --headless --disable-gpu --dump-dom https://domain.com
-```
- 
+
+
